@@ -17,3 +17,9 @@ require __DIR__.'/auth.php';
 Route::get('/lte',function(){
     return view('layouts.backend.master');
 });
+
+Route::view('/blankpage','layouts.backend.blankpage');
+
+Route::view('dashboard', 'dashboard')
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard');
