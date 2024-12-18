@@ -10,6 +10,10 @@ use App\Livewire\Goodsreq\FormGoodsReq;
 use App\Livewire\Goodsreq\GoodsRequest;
 use App\Livewire\Goodsreq\RequestStatus;
 use App\Livewire\Goodsreq\StatusGoodsRequest;
+use App\Livewire\Purchase\EditPurchaseRequest;
+use App\Livewire\Purchase\FormPurchaseRequest;
+use App\Livewire\Purchase\PurchaseRequest;
+use App\Livewire\Purchase\PurchaseStatus;
 use Illuminate\Support\Facades\Route;
 
 
@@ -49,5 +53,12 @@ Route::get('/editgoodsrequest/{req_id}',EditGoodsRequest::class)->middleware('au
 Route::get('/list_req_status',StatusGoodsRequest::class)->middleware(['auth','verified'])->name('list_req_status');
 Route::get('/request_status',RequestStatus::class)->name('request_status');
 
+// Purchase Request
+Route::get('purchaserequest',PurchaseRequest::class)->middleware(['auth','verified'])->name('purchaserequest');
+Route::get('formpurchaserequest',FormPurchaseRequest::class)->middleware(['auth','verified'])->name('formpurchaserequest');
+Route::get('/list_purchase_status',PurchaseStatus::class)->middleware(['auth','verified'])->name('list_purchase_status');
+Route::get('editpurchaserequest/{pr_id}',EditPurchaseRequest::class)->middleware(['auth','verified'])->name('editpurchaserequest');
+
 // Send Email
 Route::get('send-mail/{req_id}',[MailController::class,'sendEmail']);
+Route::get('send-mail-purchase/{req_id}',[MailController::class,'sendEmailPurchase']);
