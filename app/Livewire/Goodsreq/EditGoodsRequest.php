@@ -8,7 +8,7 @@ use App\Models\Goods;
 use App\Models\GoodsReq;
 use App\Models\GoodsReqDet;
 use App\Models\Status;
-use App\Models\tracing;
+use App\Models\Tracing;
 use App\Models\User;
 use Auth;
 use DB;
@@ -74,7 +74,7 @@ class EditGoodsRequest extends Component
         ->orderBy('goods_id')
         ->get(['goods_req_dets.id','goods_req_dets.goods_id', 'goods.name','goods.goods_type','goods_req_dets.qty_req','goods_req_dets.unit',
         'goods.qty_onhand','goods_req_dets.qty_rmn', 'goods_req_dets.qty_delvr','goods_req_dets.qty_recvd']);
-        $tracedoc = tracing::where('type','=','Req-ATK')->where('doc_id','=',$this->req_id)->orderBy('created_at','desc')->get();
+        $tracedoc = Tracing::where('type','=','Req-ATK')->where('doc_id','=',$this->req_id)->orderBy('created_at','desc')->get();
         // dd($trace_doc);
         // dd($goodsreqdet);
         // dd($dept_id);
@@ -229,7 +229,7 @@ class EditGoodsRequest extends Component
             'action' => $action,
             'comment' => $this->comment
         ];
-        tracing::create($trace);
+        Tracing::create($trace);
         return 'success';
     }
     public function rejection(){
