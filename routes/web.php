@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DeptController;
 use App\Http\Controllers\GoodsController;
 use App\Http\Controllers\MailController;
@@ -10,6 +11,7 @@ use App\Livewire\Goodsreq\GoodsRequest;
 use App\Livewire\Goodsreq\RequestStatus;
 use App\Livewire\Goodsreq\StatusGoodsRequest;
 use Illuminate\Support\Facades\Route;
+
 
 // Route::view('/', 'welcome');
 Route::view('/','layouts.backend.blank')->middleware(['auth','verified'])->name('utama');
@@ -29,6 +31,8 @@ Route::get('/lte',function(){
 });
 
 Route::view('/blankpage','layouts.backend.blankpage');
+
+Route::get('logout',[AuthController::class,'logout']);
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
