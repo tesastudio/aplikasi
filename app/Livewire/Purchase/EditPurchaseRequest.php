@@ -166,7 +166,7 @@ class EditPurchaseRequest extends Component
 
     public function approval(){
 
-        $data = PoReq::find($this->pr_id);
+        $data = Poreq::find($this->pr_id);
         $data['comment'] = $this->comment;
         $data['task_userid'] = $this->nextapproval;
         if($data['pr_status'] == 1){

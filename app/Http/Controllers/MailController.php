@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Mail\TestMail;
 use Illuminate\Support\Facades\Mail;
 use App\Models\GoodsReq;
-use App\Models\PoReq;
+use App\Models\Poreq;
 use DB;
 
 

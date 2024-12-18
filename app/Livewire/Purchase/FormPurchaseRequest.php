@@ -114,7 +114,7 @@ class FormPurchaseRequest extends Component
         // $this->user_id
         // dd($rules);
         $validated = $this->validate($rules, $pesan); 
-        $pr_id = PoReq::create($validated)->id;
+        $pr_id = Poreq::create($validated)->id;
         // $table->string('type');
         //     $table->integer('doc_id');
         //     $table->integer('userid');
