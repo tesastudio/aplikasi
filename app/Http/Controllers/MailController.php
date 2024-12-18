@@ -21,7 +21,7 @@ class MailController extends Controller
         $body = 'Mohon approvalnya untuk Permintaan Barang ATK ini <br>';
         $body = $body . $goodsreq->remark . '<br><br>';
         $body = $body . $goodsreq->comment . '<br>';
-        $body = $body . '<a href="'. config('app.url').':8000/editgoodsrequest/'. $id . '">Click me</a><br> ';
+        $body = $body . '<a href="'. config('app.url').'/editgoodsrequest/'. $id . '">Click me</a><br> ';
         $detail = [
             'title' => 'Need approval for ATK Requested by: '. $goodsreq->deptname,
             'body' =>  $body
@@ -41,7 +41,7 @@ class MailController extends Controller
         $body = 'Mohon approvalnya untuk Permintaan Barang ATK ini <br>';
         $body = $body . $poreq->remark . '<br><br>';
         $body = $body . $poreq->comment . '<br>';
-        $body = $body . '<a href="'. config('app.url').':8000/editporequest/'. $id . '">Click me</a><br> ';
+        $body = $body . '<a href="'. config('app.url').'/editporequest/'. $id . '">Click me</a><br> ';
         $detail = [
             'title' => 'Need approval for ATK Requested by: '. $poreq->deptname,
             'body' =>  $body
