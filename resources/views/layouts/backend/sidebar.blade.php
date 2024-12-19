@@ -15,7 +15,7 @@
           <img src="{{ asset('backend/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">
+          <a href="#" class="d-block small">
             <?php
                   $userinfo = Auth::user()->name;
                 
@@ -33,7 +33,7 @@
           <li class="nav-item menu-open">
             <a href="{{ url('utama') }}" class="nav-link  @if(Request::segment(1) == 'demo') active @endif">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
+              <p class="small">
                 Dashboard
                 <i class="right fas fa-angle-left"></i>
               </p>
@@ -44,43 +44,43 @@
           <li class="nav-item">
             <a href="{{ url('admin/dept') }}" class="nav-link @if(Request::segment(2) == 'dept') active @endif">
               <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
+              <p class="small">
                 Department
-                <span class="badge badge-info right">3</span>
+                {{-- <span class="badge badge-info right">3</span> --}}
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ url('admin/department') }}" class="nav-link @if(Request::segment(2) == 'dept') active @endif">
               <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
+              <p class="small">
                 Department2
-                <span class="badge badge-info right">3</span>
+                {{-- <span class="badge badge-info right">3</span> --}}
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ url('admin/employee') }}" class="nav-link @if(Request::segment(2) == 'employee') active @endif">
               <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
+              <p class="small">
                 Employee
-                <span class="badge badge-info right">3</span>
+                {{-- <span class="badge badge-info right">3</span> --}}
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="{{ url('admin/goods') }}" class="nav-link @if(Request::segment(2) == 'goods') active @endif">
               <i class="nav-icon far fa-calendar-alt"></i>
-              <p>
+              <p class="small">
                 Goods
-                <span class="badge badge-info right">3</span>
+                {{-- <span class="badge badge-info right">3</span> --}}
               </p>
             </a>
           </li>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link  ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
+              <p class="small">
                 Goods Requisition
                 <i class="right fas fa-angle-left"></i>
               </p>
@@ -89,25 +89,25 @@
               <li class="nav-item">
                 <a href="{{ url('goodsrequest') }}" class="nav-link @if(Request::segment(1) == 'request') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Request</p>
+                  <p class="small">Request</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('list_req_status') }}" class="nav-link @if(Request::segment(1) == 'status') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Status</p>
+                  <p class="small">Status</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('allocatereq') }}" class="nav-link @if(Request::segment(1) == 'status') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Alokasi ATK Request</p>
+                  <p class="small">Alokasi ATK Request</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('editgoodsrequest/17') }}" class="nav-link @if(Request::segment(1) == 'status') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Test</p>
+                  <p class="small">Test</p>
                 </a>
               </li>
             </ul>
@@ -115,7 +115,7 @@
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link  ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
+              <p class="small">
                 Purchase Requisition
                 <i class="right fas fa-angle-left"></i>
               </p>
@@ -124,13 +124,13 @@
               <li class="nav-item">
                 <a href="{{ url('purchaserequest') }}" class="nav-link @if(Request::segment(1) == 'request') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Purchase Request</p>
+                  <p class="small">Purchase Request</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('list_purchase_status') }}" class="nav-link @if(Request::segment(1) == 'status') active @endif">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Purchase Status</p>
+                  <p class="small">Purchase Status</p>
                 </a>
               </li>
               
@@ -141,7 +141,7 @@
         <li class="nav-item">
           <a href="{{ url('logout') }}" class="nav-link">
             <i class="nav-icon far fa-frown"></i>
-            <p>
+            <p class="small">
               Logout
               <span class="badge badge-info right"></span>
             </p>

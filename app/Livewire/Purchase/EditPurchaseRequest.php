@@ -131,6 +131,7 @@ class EditPurchaseRequest extends Component
         $this->created_id = $this->user_id;
         $this->lastcomment = $poreq->comment ?? '';
         $header_title = 'Purchase Request';
+        // return view('livewire.purchase.edit-purchase-request', compact('header_title','poreq','poreqdet','dept','tracedoc'))->extends('layouts.backend.bootstrap5');
         return view('livewire.purchase.edit-purchase-request', compact('header_title','poreq','poreqdet','dept','tracedoc'))->extends('layouts.backend.blankpage');
     }
 
